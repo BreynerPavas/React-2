@@ -4,7 +4,7 @@ const Counter = (props) => {
     const [contador,setContador] = useState(props.initialValue)
     // funciones
     const updateContador = (e) => {
-        if(e.target.innerHTML == "+"){
+        if(e.target.id == "suma"){
             setContador(contador + props.step)
         }else{
             setContador(contador - props.step)
@@ -13,9 +13,9 @@ const Counter = (props) => {
     }
   return (
     <>
-    <button onClick={updateContador}>+</button>
+    <button id="suma"onClick={updateContador}>+</button>
     <span>{contador}</span>
-    <button onClick={updateContador}>-</button>
+    <button id="resta"onClick={updateContador}>-</button>
     </>
   )
 }
